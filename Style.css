@@ -1,0 +1,485 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+/* 2. خلفية القسم الرئيسي */
+.hero-section {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(1.jpeg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 20px 60px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+.nav-links a, 
+.btn-signin, 
+.btn-more {
+  display: inline-block; 
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+.nav-links a {
+  color: rgb(142, 175, 196);
+  text-decoration: none;
+  font-size: 14px;
+}
+.btn-signin {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; 
+  color: #5eb9d4;
+  text-decoration: none;
+  border: 1px solid #626fe2;
+  padding: 8px 18px;
+  font-size: 14px;
+  border-radius: 12px 0px 12px 0px; 
+  transition: all 0.3s ease; 
+}
+.btn-signin:hover {
+  color: #00d2ff;        
+  border-color: #00d2ff;
+  transform: translateY(-2px);
+}
+/* 4. تنسيق المحتوى */
+.hero-content {
+  margin-top: 180px;
+  max-width: 600px;
+}
+.hero-content h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+.hero-content p {
+  font-size: 15px;
+  margin-bottom: 25px;
+  line-height: 1.4;
+}
+.btn-more {
+  background-color: white;
+  font-weight: 500;
+  color: #1c205a;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 20px;
+  font-size: 15px;
+  display: inline-block;
+  border-radius: 20px 0px 20px 0px; 
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  background-color: white;
+}
+.btn-signin:hover {
+  transform: translateY(-3px);
+  background-color: #ffffff;
+  color: #0f163a;
+}
+.btn-more:hover {
+  transform: scale(1.05);
+  background-color: #42bfdb; 
+  color: #ffffff;            
+}
+.applications-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 60px auto;   
+  padding: 0 40px;  
+}
+.section-title {
+  font-size: 32px;
+  color: #0b1a3a;
+  margin-bottom: 40px;
+  text-align: left;
+}
+.cards-container {
+  display: flex;
+  justify-content: space-between; /* مسافات متساوية بين الكروت */
+  gap: 30px;                     /* مسافة ثابتة بين الكروت */
+}
+/*  الكارت الواحد */
+.card {
+  flex: 1;                      /* كل كارت ياخد المساحة */
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;            /* لإخفاء زوايا الصورة الحادة */
+  text-align: left;             /* النص لشمال */
+  padding-bottom: 30px;          /* مسافة تحت الزرار */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* ظل خفيف */
+  transition: all 0.3s ease;
+}
+/*  الصورة جوه الكارت */
+.card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden; /* لإخفاء أي جزء زائد من الصورة */
+}
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+.card-title {
+  color: #0b1a3a;
+  font-size: 18px;
+  margin: 20px 20px 10px 20px;
+}
+.card-text {
+  color: #555555;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 20px 25px 20px;
+  max-height: 80px; /* لضمان إن النص ما يبقاش طويل  */
+  overflow: hidden;  /* لإخفاء النص الزائد */
+}
+.btn-readmore {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #0b1a3a;
+  text-decoration: none;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  /* الشكل الدايره من فوق شمال وتحت يمين */
+  border-radius: 12px 0px 12px 0px; 
+  margin-left: 20px; /*مسافة من الشمال  */
+  border: 1px solid transparent; /* إطار شفاف في البداية */
+  transition: all 0.3s ease;
+}
+/* ========================================= */
+/* 7. حركة بالسهم (Hover) على الكارت */
+/* ========================================= */
+.card:hover {
+  /*تأثير الحركة %) */
+  transform: scale(1.03) translateY(-5px); 
+  box-shadow: 0 10px 30px rgba(11, 26, 58, 0.1);
+  background-color: #fcfcfc;
+}
+/* تأثير الـ Hover على زرار Read More جوه الكارت */
+.card:hover .btn-readmore {
+  background-color: #183258; /* يتحول لأزرق */
+  color: #ffffff;            /* النص أبيض */
+}
+/* الخلفية المتدرجة */
+.ways-section {
+  background: linear-gradient(135deg, #1e52c8, #1ca5db);
+  padding: 60px 40px;
+  color: white;
+}
+.ways-header {
+  max-width: 800px;
+  margin-bottom: 40px;
+}
+.ways-header h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.ways-header p {
+  font-size: 14px;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+/* ترتيب الكروت بجانب بعضها */
+.cards-wrapper {
+  display: flex;
+  gap: 30px;
+}
+/* تصميم الكارت الأبيض */
+.work-card {
+  flex: 1;
+  background-color: #ffffff;
+  color: #333;
+  padding: 40px 30px;
+  text-align: center;
+  border-radius: 25px 0px 25px 0px;
+  
+  /* تجهيز الحركة والظل */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.card-icon {
+  font-size: 30px;
+  color: #00d2ff;
+  margin-bottom: 15px;
+}
+.work-card h3 {
+  font-size: 22px;
+  color: #000;
+  margin-bottom: 8px;
+}
+.subtitle {
+  display: block;
+  font-size: 15px;
+  color: #2c5f99;
+  margin-bottom: 20px;
+}
+/* الخط الفاصل */
+.divider {
+  border: none;
+  height: 1px;
+  background-color: #000;
+  margin: 20px 0;
+}
+.features-list {
+  list-style: none;
+  font-size: 15px;
+  line-height: 1.8;
+  color: #5424c4;
+}
+/* ========================================= */
+/* حركة التمرير بالماوس (Hover) */
+/* ========================================= */
+.work-card:hover {
+  transform: translateY(-8px);
+  
+  /* زيادة إحساس بالارتفاع (Floating Effect) */
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.25);
+}
+.knowledge-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 40px;
+}
+.knowledge-container {
+  display: flex;
+  gap: 25px;
+}
+/* الكارت الأساسي */
+.kc-card {
+  flex: 1;
+  position: relative;
+  height: 380px;
+  border-radius: 20px 0px 20px 0px; /* الزوايا المميزة */
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+/* خلفية الكارت (اللون المتدرج + الصورة) */
+.kc-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+/*   الكلام في الكرت */
+.kc-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 40px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+.kc-content h3 {
+  font-size: 22px;
+  font-weight: bold;
+}
+.kc-content p {
+  font-size: 13.5px;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+.btn-kc {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid #ffffff;
+  padding: 8px 25px;
+  font-size: 13px;
+  border-radius: 12px 0px 12px 0px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* ========================================= */
+/*  التمرير (Hover Effects) */
+/* ========================================= */
+.kc-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+/* 2. تكبير الصورة في الخلفية ببطء */
+.kc-card:hover .kc-bg {
+  transform: scale(1.08);
+}
+/* 3.  الزرار باللون الأبيض عند الـ Hover */
+.kc-card:hover .btn-kc {
+  background-color: #ffffff;
+  color: #1e52c8;
+}
+.knowledge-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 40px;
+}
+.knowledge-container {
+  display: flex;
+  gap: 25px;
+}
+.kc-card {
+  flex: 1;
+  position: relative;
+  height: 380px;
+  border-radius: 20px 0px 20px 0px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+}
+/* الشكل  لخلفية الكروت */
+.kc-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+/* ========================================= */
+/*  خلفيات وصور   */
+/* ========================================= */
+.card-1 {
+  background-image: linear-gradient(rgba(30,82,200,0.85), rgba(28,165,219,0.85)),url(11.jpeg) ;
+}
+.card-2 {
+  background-image: linear-gradient(rgba(30,82,200,0.85), rgba(28,165,219,0.85)), url(22.jpeg);
+}
+.card-3 {
+  background-image: linear-gradient(rgba(30,82,200,0.85), rgba(28,165,219,0.85)),url(33.jpeg) ;
+}
+/* ========================================= */
+.kc-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 40px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+.kc-content h3 {
+  font-size: 22px;
+  font-weight: bold;
+}
+.kc-content p {
+  font-size: 13.5px;
+  line-height: 1.5;
+  opacity: 0.95;
+}
+.btn-kc {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid #ffffff;
+  padding: 8px 25px;
+  font-size: 13px;
+  border-radius: 12px 0px 12px 0px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* حركات الـ Hover */
+.kc-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+.kc-card:hover .kc-bg {
+  transform: scale(1.08);
+}
+.kc-card:hover .btn-kc {
+  background-color: #ffffff;
+  color: #1e52c8;
+}
+/* Container  */
+.about-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+}
+.about-container {
+  display: flex;
+  align-items: center;
+  gap: 50px; /* مسافة بين الصور والكلام */
+}
+/* ========================================= */
+/* ت العمود الشمال (الصور والكلمه ) */
+/* ========================================= */
+.about-media {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+/* حركة تدوير الكلام  رأسياً */
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: #00a2e8;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.image-wrapper {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+/* ========================================= */
+/* ت العمود اليمين (الكلام) */
+/* ========================================= */
+.about-content {
+  flex: 1.2; /*ي المساحة الأكبر للكلام*/
+  color: #222222;
+}
+.about-content h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000000;
+}
+.about-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  color: #333333;
+}
+.about-content .highlight-text {
+  font-size: 20px;
+}
+.about-content strong {
+  color: #000000;
+}
